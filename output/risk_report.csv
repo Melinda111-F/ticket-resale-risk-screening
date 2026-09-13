@@ -1,0 +1,251 @@
+listing_id,seller_account_age_days,completed_sales,complaint_rate,price_ratio_to_face_value,off_platform_payment,transfer_proof,vip_claimed,vip_transfer_confirmed,seller_rating,refund_policy,urgent_pressure,label_is_risky,risk_score,risk_level,risk_reasons
+L0001,26,3,0.324,2.01,True,True,False,False,2.7,True,True,True,88,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller account is less than 30 days old; seller rating is below 3.5; seller is applying urgency pressure
+L0002,90,0,0.228,1.63,True,True,False,False,3.7,False,True,True,70,High,seller requests off-platform payment; complaint rate is at least 20%; seller has fewer than three completed sales; no refund policy is offered; seller is applying urgency pressure
+L0003,978,163,0.053,1.19,False,True,False,False,4.3,False,False,False,7,Low,no refund policy is offered
+L0004,2291,51,0.026,1.42,False,False,True,False,4.3,True,False,False,27,Medium,no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed
+L0005,132,149,0.013,0.99,False,True,False,False,3.9,False,True,False,15,Low,no refund policy is offered; seller is applying urgency pressure
+L0006,107,4,0.258,0.51,True,True,False,False,3.2,True,True,True,83,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller rating is below 3.5; seller is applying urgency pressure
+L0007,595,38,0.063,0.81,False,True,False,False,4.7,True,True,False,8,Low,seller is applying urgency pressure
+L0008,14,8,0.137,0.35,True,True,True,False,1.9,False,False,True,100,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is below 60% of face value; seller account is less than 30 days old; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; no refund policy is offered
+L0009,66,2,0.294,1.8,False,False,False,False,3.0,False,False,True,75,High,complaint rate is at least 20%; price is above 175% of face value; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0010,1894,36,0.069,1.49,False,True,False,False,4.5,True,False,False,0,Low,no material risk signals
+L0011,1942,115,0.059,0.87,False,False,False,False,4.4,True,False,False,12,Low,no transfer proof was provided
+L0012,193,98,0.043,0.81,False,True,True,True,4.5,True,False,False,0,Low,no material risk signals
+L0013,39,8,0.189,0.66,False,True,False,False,3.5,False,True,True,35,Medium,complaint rate is between 10% and 20%; seller account is less than 90 days old; no refund policy is offered; seller is applying urgency pressure
+L0014,2301,51,0.066,1.36,False,False,False,False,4.6,True,False,False,12,Low,no transfer proof was provided
+L0015,1946,86,0.05,1.14,False,True,True,True,4.9,False,False,False,7,Low,no refund policy is offered
+L0016,60,4,0.243,1.88,True,False,False,False,4.0,False,True,True,90,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller account is less than 90 days old; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0017,258,141,0.041,1.47,False,True,False,False,4.5,True,True,False,8,Low,seller is applying urgency pressure
+L0018,1246,140,0.021,1.18,False,True,False,False,4.3,False,True,False,15,Low,no refund policy is offered; seller is applying urgency pressure
+L0019,27,7,0.372,1.58,True,False,False,False,1.9,False,True,True,99,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0020,71,1,0.373,1.27,False,True,True,False,3.1,False,False,True,70,High,complaint rate is at least 20%; seller account is less than 90 days old; seller has fewer than three completed sales; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; no refund policy is offered
+L0021,1825,36,0.036,1.18,False,True,False,False,4.7,True,False,False,0,Low,no material risk signals
+L0022,1768,79,0.063,1.48,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0023,100,5,0.151,2.12,True,False,True,True,3.0,False,False,True,74,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is above 175% of face value; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0024,1106,39,0.042,1.46,False,True,False,False,4.5,True,False,False,0,Low,no material risk signals
+L0025,1353,7,0.096,0.79,False,True,True,False,4.4,True,True,False,23,Low,VIP benefits are claimed but transfer is unconfirmed; seller is applying urgency pressure
+L0026,4,5,0.301,0.31,True,False,False,False,2.5,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0027,781,53,0.021,1.49,False,True,False,False,4.0,True,False,False,0,Low,no material risk signals
+L0028,2156,141,0.005,1.28,False,True,False,False,4.5,True,False,False,0,Low,no material risk signals
+L0029,812,55,0.054,1.04,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0030,76,1,0.139,0.64,True,False,False,False,3.7,False,True,True,80,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0031,67,1,0.256,0.62,False,True,False,False,3.8,False,True,True,53,High,complaint rate is at least 20%; seller account is less than 90 days old; seller has fewer than three completed sales; no refund policy is offered; seller is applying urgency pressure
+L0032,34,4,0.191,0.52,True,True,False,False,3.3,False,True,True,88,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is below 60% of face value; seller account is less than 90 days old; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0033,662,154,0.086,1.39,False,True,False,False,4.6,False,False,False,7,Low,no refund policy is offered
+L0034,1286,47,0.043,1.42,False,True,True,True,3.8,True,False,False,0,Low,no material risk signals
+L0035,2270,46,0.038,1.49,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0036,2358,173,0.019,1.22,False,False,True,True,4.2,True,False,False,12,Low,no transfer proof was provided
+L0037,271,157,0.011,1.28,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0038,1074,173,0.079,1.25,False,True,False,False,5.0,False,False,False,7,Low,no refund policy is offered
+L0039,111,1,0.298,1.42,True,True,True,False,3.0,False,True,True,95,High,seller requests off-platform payment; complaint rate is at least 20%; seller has fewer than three completed sales; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0040,1277,76,0.042,1.16,False,True,True,True,4.6,True,False,False,0,Low,no material risk signals
+L0041,963,58,0.089,1.19,False,True,True,False,4.9,True,False,False,15,Low,VIP benefits are claimed but transfer is unconfirmed
+L0042,122,43,0.026,1.37,False,True,False,False,4.6,True,False,False,0,Low,no material risk signals
+L0043,294,32,0.044,1.34,False,True,True,True,4.1,True,False,False,0,Low,no material risk signals
+L0044,570,95,0.02,1.19,False,False,False,False,4.9,True,False,False,12,Low,no transfer proof was provided
+L0045,1251,15,0.023,1.04,False,True,False,False,4.2,False,False,False,7,Low,no refund policy is offered
+L0046,1114,31,0.027,1.3,False,True,True,True,4.1,True,False,False,0,Low,no material risk signals
+L0047,506,15,0.008,1.49,False,True,False,False,3.9,True,False,False,0,Low,no material risk signals
+L0048,339,75,0.087,1.08,False,True,False,False,4.5,True,False,False,0,Low,no material risk signals
+L0049,82,6,0.251,1.75,True,False,True,False,3.3,True,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 90 days old; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; seller is applying urgency pressure
+L0050,1828,113,0.024,1.14,False,True,True,True,4.3,True,False,False,0,Low,no material risk signals
+L0051,111,1,0.367,0.68,False,False,False,False,3.1,True,False,True,52,High,complaint rate is at least 20%; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5
+L0052,74,2,0.347,1.96,True,False,True,False,2.7,True,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; seller is applying urgency pressure
+L0053,930,105,0.059,0.86,False,True,False,False,4.1,True,False,False,0,Low,no material risk signals
+L0054,10,1,0.182,0.58,True,False,False,False,3.0,False,True,True,100,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is below 60% of face value; seller account is less than 30 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0055,2019,9,0.073,1.11,False,True,True,True,3.8,False,False,False,7,Low,no refund policy is offered
+L0056,1783,179,0.033,0.84,False,True,False,False,4.7,True,False,False,0,Low,no material risk signals
+L0057,1735,160,0.054,1.37,False,True,False,False,4.3,False,True,False,15,Low,no refund policy is offered; seller is applying urgency pressure
+L0058,8,0,0.192,0.51,True,False,False,False,2.9,False,False,True,100,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is below 60% of face value; seller account is less than 30 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0059,159,165,0.011,1.24,False,True,True,True,4.7,False,False,False,7,Low,no refund policy is offered
+L0060,71,0,0.095,2.2,False,False,False,False,1.9,False,False,True,53,High,price is above 175% of face value; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0061,84,3,0.211,0.56,True,False,False,False,3.8,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 90 days old; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0062,1425,5,0.081,1.09,False,True,True,False,3.8,True,False,False,15,Low,VIP benefits are claimed but transfer is unconfirmed
+L0063,104,8,0.177,0.39,True,True,False,False,2.7,True,False,True,65,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is below 60% of face value; seller rating is below 3.5
+L0064,2200,47,0.036,0.87,False,True,True,False,3.8,True,False,False,15,Low,VIP benefits are claimed but transfer is unconfirmed
+L0065,115,2,0.272,1.29,True,True,False,False,3.2,False,False,True,72,High,seller requests off-platform payment; complaint rate is at least 20%; seller has fewer than three completed sales; seller rating is below 3.5; no refund policy is offered
+L0066,1146,10,0.032,0.84,False,True,True,False,5.0,True,False,False,15,Low,VIP benefits are claimed but transfer is unconfirmed
+L0067,286,49,0.002,0.75,False,True,False,False,4.3,True,False,False,0,Low,no material risk signals
+L0068,551,93,0.095,1.42,False,True,False,False,4.7,True,False,False,0,Low,no material risk signals
+L0069,1099,59,0.001,0.94,False,True,True,True,4.5,False,True,False,15,Low,no refund policy is offered; seller is applying urgency pressure
+L0070,1043,21,0.005,1.1,False,True,True,True,3.8,True,False,False,0,Low,no material risk signals
+L0071,16,4,0.098,0.42,True,True,True,False,3.9,False,True,True,88,High,seller requests off-platform payment; price is below 60% of face value; seller account is less than 30 days old; VIP benefits are claimed but transfer is unconfirmed; no refund policy is offered; seller is applying urgency pressure
+L0072,1541,144,0.01,0.98,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0073,87,8,0.215,0.63,True,False,False,False,1.9,True,False,True,77,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 90 days old; no transfer proof was provided; seller rating is below 3.5
+L0074,78,3,0.112,2.03,True,False,True,False,2.5,False,True,True,100,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is above 175% of face value; seller account is less than 90 days old; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0075,200,132,0.055,0.95,False,True,False,False,4.7,True,True,False,8,Low,seller is applying urgency pressure
+L0076,2184,106,0.003,0.75,False,True,False,False,4.9,True,True,False,8,Low,seller is applying urgency pressure
+L0077,200,7,0.03,1.29,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0078,16,4,0.09,1.77,True,True,True,True,3.9,False,True,True,63,High,seller requests off-platform payment; price is above 175% of face value; seller account is less than 30 days old; no refund policy is offered; seller is applying urgency pressure
+L0079,40,7,0.232,1.79,True,False,False,False,3.9,False,True,True,90,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller account is less than 90 days old; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0080,1466,168,0.039,1.22,False,True,False,False,4.5,False,False,False,7,Low,no refund policy is offered
+L0081,253,16,0.01,0.97,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0082,6,8,0.305,1.37,True,False,False,False,3.4,False,True,True,99,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0083,138,167,0.076,1.09,False,True,True,True,4.6,True,False,False,0,Low,no material risk signals
+L0084,120,1,0.281,1.97,True,True,False,False,2.2,False,True,True,88,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller has fewer than three completed sales; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0085,31,5,0.08,1.7,True,False,False,False,3.9,False,True,True,60,High,seller requests off-platform payment; seller account is less than 90 days old; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0086,101,4,0.37,2.14,True,False,True,False,2.0,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0087,1697,55,0.056,1.22,False,True,False,False,4.8,True,False,False,0,Low,no material risk signals
+L0088,15,7,0.171,1.72,True,True,True,False,3.8,False,True,True,82,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 30 days old; VIP benefits are claimed but transfer is unconfirmed; no refund policy is offered; seller is applying urgency pressure
+L0089,2037,101,0.098,1.43,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0090,1321,101,0.033,1.16,False,True,True,True,4.3,False,False,False,7,Low,no refund policy is offered
+L0091,1243,21,0.056,1.15,False,True,True,True,4.0,True,False,False,0,Low,no material risk signals
+L0092,880,50,0.086,0.83,True,False,True,False,4.3,True,False,False,52,High,seller requests off-platform payment; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed
+L0093,59,6,0.27,0.64,True,False,False,False,3.1,False,False,True,84,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 90 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0094,1837,168,0.029,1.44,False,True,False,False,4.2,True,False,False,0,Low,no material risk signals
+L0095,505,121,0.011,1.09,False,True,False,False,3.9,True,False,False,0,Low,no material risk signals
+L0096,1166,70,0.004,1.31,False,True,False,False,4.9,False,False,False,7,Low,no refund policy is offered
+L0097,88,0,0.255,0.45,True,True,False,False,3.6,False,True,True,96,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 90 days old; seller has fewer than three completed sales; no refund policy is offered; seller is applying urgency pressure
+L0098,114,4,0.375,0.58,True,True,False,False,2.6,False,True,True,90,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0099,40,0,0.12,0.7,True,False,False,False,3.1,False,True,True,90,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0100,1491,9,0.076,1.04,False,True,False,False,4.3,True,False,False,0,Low,no material risk signals
+L0101,234,128,0.028,1.41,False,True,False,False,3.8,True,False,False,0,Low,no material risk signals
+L0102,1001,37,0.033,1.09,False,True,True,True,5.0,False,False,False,7,Low,no refund policy is offered
+L0103,90,6,0.103,0.55,False,True,False,False,2.9,False,False,True,47,Medium,complaint rate is between 10% and 20%; price is below 60% of face value; seller rating is below 3.5; no refund policy is offered
+L0104,17,4,0.164,1.35,True,False,False,False,4.0,False,False,True,71,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 30 days old; no transfer proof was provided; no refund policy is offered
+L0105,1785,118,0.033,0.96,False,True,True,True,4.5,True,False,False,0,Low,no material risk signals
+L0106,531,91,0.028,1.48,False,True,True,False,3.8,True,False,False,15,Low,VIP benefits are claimed but transfer is unconfirmed
+L0107,1641,46,0.088,0.81,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0108,442,46,0.014,0.99,False,True,False,False,4.5,True,False,False,0,Low,no material risk signals
+L0109,1610,155,0.035,1.32,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0110,1244,19,0.004,1.29,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0111,1779,179,0.052,0.86,False,True,True,True,3.7,True,False,False,0,Low,no material risk signals
+L0112,118,1,0.195,0.32,False,True,False,False,3.5,False,True,True,53,High,complaint rate is between 10% and 20%; price is below 60% of face value; seller has fewer than three completed sales; no refund policy is offered; seller is applying urgency pressure
+L0113,1201,52,0.012,0.85,False,True,True,True,4.8,True,False,False,0,Low,no material risk signals
+L0114,1304,157,0.079,0.9,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0115,1761,44,0.016,1.01,False,True,True,True,3.8,True,False,False,0,Low,no material risk signals
+L0116,111,7,0.339,1.31,True,True,False,False,2.0,True,True,True,65,High,seller requests off-platform payment; complaint rate is at least 20%; seller rating is below 3.5; seller is applying urgency pressure
+L0117,1353,15,0.005,0.96,False,True,False,False,4.8,True,False,False,0,Low,no material risk signals
+L0118,998,164,0.004,1.3,False,True,False,False,4.1,True,False,False,0,Low,no material risk signals
+L0119,1681,61,0.019,1.4,False,True,False,False,4.7,True,False,False,0,Low,no material risk signals
+L0120,1053,5,0.081,1.03,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0121,515,87,0.044,1.25,False,True,True,True,4.8,True,False,False,0,Low,no material risk signals
+L0122,52,7,0.089,1.59,False,False,False,False,2.4,True,True,True,38,Medium,seller account is less than 90 days old; no transfer proof was provided; seller rating is below 3.5; seller is applying urgency pressure
+L0123,1689,154,0.015,1.14,False,True,True,True,4.1,True,False,False,0,Low,no material risk signals
+L0124,52,3,0.111,1.53,True,True,False,False,2.2,False,True,True,70,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 90 days old; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0125,2125,88,0.097,1.5,False,True,False,False,3.9,True,False,False,0,Low,no material risk signals
+L0126,330,9,0.076,1.47,False,True,False,False,4.6,True,False,False,0,Low,no material risk signals
+L0127,1120,171,0.092,0.83,False,True,False,False,3.9,True,True,False,8,Low,seller is applying urgency pressure
+L0128,12,5,0.25,1.88,False,False,False,False,2.7,True,True,True,75,High,complaint rate is at least 20%; price is above 175% of face value; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; seller is applying urgency pressure
+L0129,594,116,0.088,1.1,True,True,False,False,4.5,True,False,False,25,Medium,seller requests off-platform payment
+L0130,2349,66,0.076,1.33,False,True,False,False,3.9,True,False,False,0,Low,no material risk signals
+L0131,341,134,0.024,1.15,False,True,False,False,4.5,True,True,False,8,Low,seller is applying urgency pressure
+L0132,2219,88,0.046,0.82,False,True,True,True,4.3,True,False,False,0,Low,no material risk signals
+L0133,897,140,0.013,1.49,False,True,False,False,4.7,False,False,False,7,Low,no refund policy is offered
+L0134,95,2,0.299,1.65,True,False,False,False,2.5,True,True,True,85,High,seller requests off-platform payment; complaint rate is at least 20%; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; seller is applying urgency pressure
+L0135,19,3,0.285,1.73,True,False,False,False,2.2,False,False,True,91,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0136,312,5,0.081,1.04,False,True,False,False,4.0,True,False,False,0,Low,no material risk signals
+L0137,1930,129,0.056,0.77,False,False,True,True,4.5,True,False,False,12,Low,no transfer proof was provided
+L0138,241,136,0.083,1.23,False,True,True,True,4.0,True,False,False,0,Low,no material risk signals
+L0139,1831,167,0.005,1.18,False,True,False,False,4.6,False,False,False,7,Low,no refund policy is offered
+L0140,1555,82,0.081,1.07,False,True,False,False,4.8,False,False,False,7,Low,no refund policy is offered
+L0141,1373,73,0.099,1.25,False,True,False,False,3.9,True,False,False,0,Low,no material risk signals
+L0142,1187,140,0.044,1.49,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0143,22,4,0.275,0.56,True,True,False,False,4.0,True,True,True,88,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 30 days old; seller is applying urgency pressure
+L0144,934,149,0.054,1.01,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0145,40,7,0.094,1.66,False,True,False,False,3.5,False,True,True,23,Low,seller account is less than 90 days old; no refund policy is offered; seller is applying urgency pressure
+L0146,1491,34,0.049,0.88,False,True,False,False,4.8,True,False,False,0,Low,no material risk signals
+L0147,2272,102,0.06,1.14,False,True,True,True,4.5,False,False,False,7,Low,no refund policy is offered
+L0148,1195,153,0.053,1.43,False,True,True,True,4.1,True,False,False,0,Low,no material risk signals
+L0149,2034,117,0.06,1.39,False,True,False,False,4.4,True,True,False,8,Low,seller is applying urgency pressure
+L0150,298,104,0.02,1.33,False,True,True,True,4.0,False,False,False,7,Low,no refund policy is offered
+L0151,42,0,0.241,0.6,False,False,True,False,2.8,True,True,True,83,High,complaint rate is at least 20%; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; seller is applying urgency pressure
+L0152,692,32,0.049,0.89,False,True,False,False,4.7,True,False,False,0,Low,no material risk signals
+L0153,1447,54,0.052,1.33,True,True,False,False,4.7,True,False,False,25,Medium,seller requests off-platform payment
+L0154,506,150,0.037,1.11,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0155,101,1,0.37,0.38,True,False,False,False,3.7,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller has fewer than three completed sales; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0156,60,1,0.166,0.64,True,False,False,False,3.7,False,True,True,80,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0157,1429,72,0.096,1.44,False,True,False,False,3.9,True,True,False,8,Low,seller is applying urgency pressure
+L0158,56,8,0.295,0.31,False,False,False,False,4.0,False,True,True,75,High,complaint rate is at least 20%; price is below 60% of face value; seller account is less than 90 days old; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0159,899,157,0.085,1.39,False,True,False,False,4.1,True,False,False,0,Low,no material risk signals
+L0160,2095,172,0.021,1.4,False,True,False,False,4.1,True,False,False,0,Low,no material risk signals
+L0161,100,3,0.129,1.84,True,True,False,False,2.8,False,True,True,70,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is above 175% of face value; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0162,108,3,0.153,0.3,True,True,True,False,3.8,False,True,True,85,High,seller requests off-platform payment; complaint rate is between 10% and 20%; price is below 60% of face value; VIP benefits are claimed but transfer is unconfirmed; no refund policy is offered; seller is applying urgency pressure
+L0163,828,36,0.063,1.28,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0164,97,7,0.237,0.54,True,False,False,False,2.1,False,False,True,94,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0165,88,4,0.19,1.74,True,True,True,False,2.6,False,True,True,85,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 90 days old; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0166,1918,171,0.056,1.25,False,True,True,True,4.1,False,False,False,7,Low,no refund policy is offered
+L0167,2019,25,0.013,1.15,False,True,False,False,3.8,True,True,False,8,Low,seller is applying urgency pressure
+L0168,1684,144,0.082,1.03,False,True,False,False,5.0,True,False,False,0,Low,no material risk signals
+L0169,596,40,0.091,1.12,False,True,True,True,3.8,True,False,False,0,Low,no material risk signals
+L0170,876,48,0.049,1.49,False,True,False,False,5.0,True,False,False,0,Low,no material risk signals
+L0171,780,6,0.085,0.77,False,True,False,False,4.2,True,False,False,0,Low,no material risk signals
+L0172,755,70,0.041,1.18,False,False,False,False,4.9,True,False,False,12,Low,no transfer proof was provided
+L0173,1455,48,0.069,0.88,False,True,False,False,4.6,True,False,False,0,Low,no material risk signals
+L0174,219,60,0.019,0.98,False,True,False,False,4.4,False,False,False,7,Low,no refund policy is offered
+L0175,1645,104,0.052,0.88,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0176,43,2,0.114,0.65,True,False,False,False,3.0,True,True,True,83,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; seller is applying urgency pressure
+L0177,96,4,0.373,0.56,True,False,True,False,4.0,False,False,True,99,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed; no refund policy is offered
+L0178,744,111,0.078,1.09,False,True,False,False,4.1,False,False,False,7,Low,no refund policy is offered
+L0179,36,0,0.334,1.93,True,False,False,False,2.4,True,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; seller is applying urgency pressure
+L0180,2346,176,0.008,1.18,False,True,True,True,4.4,True,True,False,8,Low,seller is applying urgency pressure
+L0181,751,78,0.071,1.37,False,False,False,False,4.9,False,False,False,19,Low,no transfer proof was provided; no refund policy is offered
+L0182,1818,79,0.059,1.29,False,True,False,False,5.0,False,False,False,7,Low,no refund policy is offered
+L0183,1430,172,0.097,0.77,False,False,False,False,3.8,True,False,False,12,Low,no transfer proof was provided
+L0184,29,3,0.293,1.67,True,True,True,True,3.7,False,True,True,77,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 30 days old; no refund policy is offered; seller is applying urgency pressure
+L0185,568,105,0.036,1.48,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0186,748,63,0.022,0.97,False,True,True,True,4.2,False,True,False,15,Low,no refund policy is offered; seller is applying urgency pressure
+L0187,2252,143,0.041,1.07,False,True,True,True,4.8,False,False,False,7,Low,no refund policy is offered
+L0188,1448,124,0.078,1.0,False,False,True,True,5.0,True,False,False,12,Low,no transfer proof was provided
+L0189,2335,59,0.085,1.15,False,True,True,True,4.3,True,False,False,0,Low,no material risk signals
+L0190,28,3,0.361,2.02,False,False,False,False,2.9,True,True,True,75,High,complaint rate is at least 20%; price is above 175% of face value; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; seller is applying urgency pressure
+L0191,291,70,0.051,0.84,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0192,177,70,0.037,0.94,False,True,False,False,4.5,True,False,False,0,Low,no material risk signals
+L0193,2059,75,0.028,0.84,False,True,False,False,5.0,True,False,False,0,Low,no material risk signals
+L0194,837,94,0.094,0.94,False,True,False,False,4.3,True,False,False,0,Low,no material risk signals
+L0195,51,6,0.339,0.55,False,False,True,False,3.4,False,False,True,92,High,complaint rate is at least 20%; price is below 60% of face value; seller account is less than 90 days old; no transfer proof was provided; VIP benefits are claimed but transfer is unconfirmed; seller rating is below 3.5; no refund policy is offered
+L0196,11,3,0.217,0.36,True,False,False,False,2.0,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0197,600,165,0.054,1.33,False,True,False,False,4.5,False,False,False,7,Low,no refund policy is offered
+L0198,20,3,0.322,0.54,True,False,False,False,2.3,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 30 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0199,88,6,0.201,1.97,True,False,False,False,2.2,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller account is less than 90 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0200,1771,102,0.1,1.2,False,True,False,False,4.4,True,False,False,12,Low,complaint rate is between 10% and 20%
+L0201,1535,129,0.03,1.26,False,True,False,False,4.8,False,False,False,7,Low,no refund policy is offered
+L0202,500,35,0.032,1.41,False,True,False,False,3.7,True,False,False,0,Low,no material risk signals
+L0203,309,137,0.093,1.45,False,True,False,False,4.0,True,False,False,0,Low,no material risk signals
+L0204,495,98,0.017,1.17,False,True,False,False,3.8,True,False,False,0,Low,no material risk signals
+L0205,1899,64,0.082,1.14,False,True,False,False,4.7,False,False,False,7,Low,no refund policy is offered
+L0206,1452,45,0.036,0.76,False,True,False,False,5.0,True,False,False,0,Low,no material risk signals
+L0207,2076,21,0.052,1.08,False,True,True,True,4.6,True,False,False,0,Low,no material risk signals
+L0208,595,158,0.017,0.86,False,True,False,False,4.3,True,False,False,0,Low,no material risk signals
+L0209,116,4,0.085,0.41,False,False,False,False,3.7,False,True,True,45,Medium,price is below 60% of face value; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0210,1716,111,0.091,1.07,False,False,False,False,4.0,True,False,False,12,Low,no transfer proof was provided
+L0211,2110,43,0.049,1.35,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0212,65,7,0.148,0.67,True,True,False,False,2.0,False,True,True,70,High,seller requests off-platform payment; complaint rate is between 10% and 20%; seller account is less than 90 days old; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0213,1363,150,0.023,0.84,False,True,True,True,3.9,True,False,False,0,Low,no material risk signals
+L0214,1695,167,0.064,1.16,False,False,True,True,4.2,False,False,False,19,Low,no transfer proof was provided; no refund policy is offered
+L0215,116,4,0.342,0.6,False,False,False,False,1.9,False,False,True,51,High,complaint rate is at least 20%; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered
+L0216,3,2,0.38,0.34,True,False,False,False,4.0,False,True,True,100,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 30 days old; seller has fewer than three completed sales; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0217,580,93,0.067,0.8,False,True,True,True,5.0,True,False,False,0,Low,no material risk signals
+L0218,793,6,0.08,1.17,False,True,True,True,3.8,False,False,False,7,Low,no refund policy is offered
+L0219,1339,19,0.006,1.44,False,False,False,False,4.0,True,False,False,12,Low,no transfer proof was provided
+L0220,1580,155,0.065,1.3,True,True,False,False,4.1,True,False,False,25,Medium,seller requests off-platform payment
+L0221,506,135,0.013,1.07,False,True,False,False,4.9,True,True,False,8,Low,seller is applying urgency pressure
+L0222,687,6,0.063,1.17,False,False,False,False,4.2,False,False,False,19,Low,no transfer proof was provided; no refund policy is offered
+L0223,276,104,0.049,0.78,True,True,True,False,4.3,True,True,False,48,Medium,seller requests off-platform payment; VIP benefits are claimed but transfer is unconfirmed; seller is applying urgency pressure
+L0224,24,1,0.105,0.68,False,True,False,False,4.0,True,True,True,43,Medium,complaint rate is between 10% and 20%; seller account is less than 30 days old; seller has fewer than three completed sales; seller is applying urgency pressure
+L0225,67,2,0.136,1.5,False,False,False,False,2.4,False,True,True,65,High,complaint rate is between 10% and 20%; seller account is less than 90 days old; seller has fewer than three completed sales; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0226,38,5,0.248,0.42,False,False,False,False,1.8,False,True,True,85,High,complaint rate is at least 20%; price is below 60% of face value; seller account is less than 90 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0227,1180,75,0.065,1.19,False,True,False,False,5.0,True,False,False,0,Low,no material risk signals
+L0228,1098,81,0.022,1.45,True,True,False,False,4.8,True,False,False,25,Medium,seller requests off-platform payment
+L0229,418,110,0.07,0.98,False,True,False,False,4.8,True,False,False,0,Low,no material risk signals
+L0230,1690,93,0.07,0.78,False,True,True,True,4.2,True,False,False,0,Low,no material risk signals
+L0231,1859,29,0.003,1.23,False,True,False,False,4.9,True,False,False,0,Low,no material risk signals
+L0232,1989,13,0.026,0.93,False,True,True,False,4.9,True,False,False,15,Low,VIP benefits are claimed but transfer is unconfirmed
+L0233,937,176,0.098,1.17,False,True,True,True,4.9,True,False,False,0,Low,no material risk signals
+L0234,665,152,0.028,0.85,False,True,True,True,4.6,True,False,False,0,Low,no material risk signals
+L0235,1094,124,0.01,1.18,False,True,False,False,4.0,True,False,False,0,Low,no material risk signals
+L0236,575,45,0.059,0.93,False,True,False,False,4.7,True,False,False,0,Low,no material risk signals
+L0237,453,14,0.069,1.0,False,True,True,False,4.5,True,False,False,15,Low,VIP benefits are claimed but transfer is unconfirmed
+L0238,1724,24,0.035,1.09,False,True,True,True,3.8,True,False,False,0,Low,no material risk signals
+L0239,687,10,0.092,1.01,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
+L0240,414,65,0.082,1.46,False,True,False,False,4.5,False,True,False,15,Low,no refund policy is offered; seller is applying urgency pressure
+L0241,27,6,0.266,0.67,True,True,True,False,3.7,False,False,True,84,High,seller requests off-platform payment; complaint rate is at least 20%; seller account is less than 30 days old; VIP benefits are claimed but transfer is unconfirmed; no refund policy is offered
+L0242,2311,60,0.081,1.2,False,True,False,False,3.9,True,False,False,0,Low,no material risk signals
+L0243,2238,43,0.067,1.5,False,True,False,False,4.2,True,False,False,0,Low,no material risk signals
+L0244,34,7,0.111,1.63,False,False,False,False,3.0,False,True,True,57,High,complaint rate is between 10% and 20%; seller account is less than 90 days old; no transfer proof was provided; seller rating is below 3.5; no refund policy is offered; seller is applying urgency pressure
+L0245,2159,95,0.078,1.06,False,True,False,False,4.1,True,False,False,0,Low,no material risk signals
+L0246,787,73,0.086,0.92,False,False,False,False,3.9,True,False,False,12,Low,no transfer proof was provided
+L0247,65,7,0.313,0.39,True,True,True,True,2.3,True,True,True,91,High,seller requests off-platform payment; complaint rate is at least 20%; price is below 60% of face value; seller account is less than 90 days old; seller rating is below 3.5; seller is applying urgency pressure
+L0248,1408,22,0.069,1.36,False,True,False,False,4.7,True,False,False,0,Low,no material risk signals
+L0249,10,5,0.289,1.94,True,False,False,False,3.7,False,True,True,97,High,seller requests off-platform payment; complaint rate is at least 20%; price is above 175% of face value; seller account is less than 30 days old; no transfer proof was provided; no refund policy is offered; seller is applying urgency pressure
+L0250,500,19,0.069,1.15,False,True,False,False,4.4,True,False,False,0,Low,no material risk signals
