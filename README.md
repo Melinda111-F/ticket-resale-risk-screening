@@ -1,11 +1,12 @@
 # Concert Ticket Resale Risk Screening Tool
 
-## Why I built this
+## Project motivation
 
-After dealing with uncertainty around a transferred VIP concert ticket—especially
-whether benefits would transfer, what seller evidence was trustworthy, and when a
-transaction should be treated cautiously—I wanted a consistent way to assess
-resale-listing risk instead of relying only on intuition.
+Online ticket resale listings can present several signals that are difficult to
+evaluate consistently, including unusual pricing, limited seller history,
+off-platform payment requests, unclear transfer evidence, and uncertain VIP
+benefit eligibility. This project explores how transparent, rule-based analysis
+can combine those signals into a consistent preliminary risk assessment.
 
 This project is an original, educational risk-screening pipeline. It evaluates
 synthetic ticket-resale listings, explains which signals raised concern, and
@@ -28,6 +29,16 @@ The model considers seller history, complaint rate, price deviation, requests fo
 off-platform payment, proof of ticket transfer, VIP-benefit confirmation, seller
 rating, refund policy, and urgency pressure. The rules are intentionally
 explainable: each output row contains both the score and the reasons.
+
+## Demonstration results
+
+On the included set of 250 reproducible synthetic listings, the pipeline
+classified 167 as Low risk, 11 as Medium risk, and 72 as High risk. Against the
+synthetic reference labels, the High-risk classification achieved 98.61%
+precision and 92.21% recall. These figures describe only the generated
+demonstration data and are not estimates of real-world fraud performance.
+
+![Ticket resale listing risk distribution](output/risk_distribution.png)
 
 ## Run the project
 
@@ -61,4 +72,3 @@ The labels and records are synthetic, and the scoring weights are judgment-based
 not learned from verified fraud outcomes. A production model would require real
 consented data, bias and calibration testing, monitoring for changing fraud
 patterns, privacy controls, and human review of high-risk cases.
-
