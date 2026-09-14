@@ -1,74 +1,59 @@
-# Concert Ticket Resale Risk Screening Tool
+# Ticket Resale Account Risk Screening Tool
 
-## Project motivation
+This beginner-friendly Python project screens accounts on a fictional ticket
+resale marketplace. It uses account activity and follower-network patterns to
+identify accounts with unusual behaviour and sellers whose apparent popularity
+may be supported mainly by high-risk accounts.
 
-Online ticket resale listings can present several signals that are difficult to
-evaluate consistently, including unusual pricing, limited seller history,
-off-platform payment requests, unclear transfer evidence, and uncertain VIP
-benefit eligibility. This project explores how transparent, rule-based analysis
-can combine those signals into a consistent preliminary risk assessment.
+## Motivation
 
-This project is an original, educational risk-screening pipeline. It evaluates
-synthetic ticket-resale listings, explains which signals raised concern, and
-produces an auditable report. It is not affiliated with Ticketmaster or any other
-ticketing platform and should not be used as the sole basis for a real purchase.
+Peer-to-peer ticket marketplaces depend heavily on seller reputation. A seller
+may appear trustworthy because many accounts follow them, but that signal is
+less meaningful when most of those followers also show unusual behaviour. This
+project demonstrates an explainable, rules-based way to prioritize accounts for
+manual review. It does not determine that any account has committed fraud.
 
-## What it does
+## How it works
 
-- validates CSV records and rejects malformed values;
-- assigns a transparent risk score from 0 to 100;
-- classifies listings as Low, Medium, or High risk;
-- records every rule that contributed to the score;
-- summarizes risk distribution and evaluates results against synthetic labels;
-- generates a chart and a machine-readable JSON summary;
-- includes automated tests for scoring, boundaries, and invalid input.
+1. Read account activity from `data/accounts.csv` into a nested dictionary.
+2. Add follower and following relationships from `data/connections.csv`.
+3. Count reciprocal connections for every account.
+4. Calculate activity thresholds using quantiles from the dataset.
+5. Assign one or more explainable risk groups to accounts meeting the rules.
+6. Find sellers whose followers are more than 50% risk candidates.
+7. Rank candidates and sellers with a manually implemented selection sort.
 
-## Risk signals
+## Risk groups
 
-The model considers seller history, complaint rate, price deviation, requests for
-off-platform payment, proof of ticket transfer, VIP-benefit confirmation, seller
-rating, refund policy, and urgency pressure. The rules are intentionally
-explainable: each output row contains both the score and the reasons.
+- High messages with low listings
+- High messages with low mutual connections
+- High messages from a recently created account
+- High following count with a low follower count
 
-## Demonstration results
+These are screening indicators for demonstration, not proof of fraud.
 
-On the included set of 250 reproducible synthetic listings, the pipeline
-classified 167 as Low risk, 11 as Medium risk, and 72 as High risk. Against the
-synthetic reference labels, the High-risk classification achieved 98.61%
-precision and 92.21% recall. These figures describe only the generated
-demonstration data and are not estimates of real-world fraud performance.
+## Run
 
-![Ticket resale listing risk distribution](output/risk_distribution.png)
-
-## Run the project
+From the project directory:
 
 ```bash
-python3 generate_sample_data.py --rows 250
-python3 ticket_risk.py data/sample_listings.csv output/risk_report.csv
-python3 analyze_results.py output/risk_report.csv output
-python3 -m unittest discover -s tests -v
+python ticket_account_risk.py
+python -m unittest discover -s tests
 ```
 
-Install charting dependencies first:
+The project uses only the Python standard library.
 
-```bash
-python3 -m pip install -r requirements.txt
-```
+## Skills demonstrated
 
-## Files
+- CSV file processing
+- Nested dictionaries and lists
+- Relationship-network analysis
+- Quantile-based thresholds
+- Rule-based risk classification
+- Filtering and manual sorting
+- Unit testing
 
-- `ticket_risk.py`: validation, scoring, classification, and CSV pipeline
-- `generate_sample_data.py`: deterministic synthetic-data generator
-- `analyze_results.py`: summary metrics and visualization
-- `tests/test_ticket_risk.py`: automated unit tests
-- `data/sample_listings.csv`: synthetic input data
-- `output/risk_report.csv`: scored output
-- `output/summary.json`: aggregate results and evaluation metrics
-- `output/risk_distribution.png`: risk-level visualization
+## Data
 
-## Limitations and next steps
-
-The labels and records are synthetic, and the scoring weights are judgment-based,
-not learned from verified fraud outcomes. A production model would require real
-consented data, bias and calibration testing, monitoring for changing fraud
-patterns, privacy controls, and human review of high-risk cases.
+All accounts and relationships are fictional and were created only for this
+educational demonstration.
