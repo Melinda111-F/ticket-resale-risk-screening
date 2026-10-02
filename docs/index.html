@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ticket Account Risk Screener</title>
+  <meta name="description" content="Screen fictional ticket resale accounts using explainable activity and network rules.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e2238'/%3E%3Cpath d='M15 20h34v9a6 6 0 0 0 0 12v9H15v-9a6 6 0 0 0 0-12z' fill='%2328c6a3'/%3E%3Cpath d='M32 24v22' stroke='%230e2238' stroke-width='3' stroke-dasharray='4 4'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#11263b;--muted:#617184;--bg:#f2f6f8;--card:#fff;--line:#d8e1e7;--accent:#087f6b;--accent2:#dff6ef;--warn:#a85218;--warnbg:#fff0df;--shadow:0 14px 40px rgba(17,38,59,.09)}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(160deg,#eef5f7 0%,#f8fafb 55%,#edf3f7 100%);min-height:100vh}
+    main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:38px 0 56px}
+    header{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:26px}
+    .eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+    h1{font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.045em;line-height:1.02;margin:0;max-width:720px}
+    .intro{max-width:520px;color:var(--muted);line-height:1.65;margin:14px 0 0;font-size:1rem}
+    .badge{background:var(--accent2);color:#075f50;border:1px solid #b9e6d9;border-radius:999px;padding:8px 12px;font-size:.82rem;font-weight:700;white-space:nowrap}
+    .workspace{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:20px}
+    .panel{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    .controls{padding:22px;height:max-content}.controls h2,.results h2{font-size:1.05rem;margin:0 0 6px}.helper{margin:0 0 20px;color:var(--muted);font-size:.9rem;line-height:1.5}
+    label{display:block;font-size:.88rem;font-weight:750;margin:16px 0 7px}.file{display:block;width:100%;padding:12px;border:1px dashed #aebdc8;border-radius:11px;background:#f7fafb;color:var(--muted)}
+    .file::file-selector-button{border:0;border-radius:8px;background:#e5edf1;color:var(--ink);font-weight:700;padding:8px 10px;margin-right:10px;cursor:pointer}
+    .actions{display:grid;gap:10px;margin-top:20px}button{min-height:46px;border-radius:11px;border:1px solid transparent;font:inherit;font-weight:800;cursor:pointer}button.primary{background:var(--ink);color:white}button.secondary{background:white;border-color:var(--line);color:var(--ink)}button:hover{transform:translateY(-1px)}
+    .privacy{font-size:.78rem;line-height:1.45;color:var(--muted);margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+    .results{padding:22px;min-height:540px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.metric{background:#f5f8fa;border:1px solid var(--line);border-radius:13px;padding:15px}.metric strong{display:block;font-size:1.7rem;letter-spacing:-.04em}.metric span{color:var(--muted);font-size:.8rem}
+    .section-title{font-size:.85rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:24px 0 10px}.cards{display:grid;gap:9px}.risk-card{border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:11px;padding:13px 14px;background:white}.risk-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.risk-id{font-weight:850}.risk-count{font-size:.76rem;font-weight:800;background:var(--warnbg);color:var(--warn);border-radius:999px;padding:5px 8px}.reasons{color:var(--muted);font-size:.86rem;line-height:1.5;margin-top:7px}.seller-list{display:flex;flex-wrap:wrap;gap:8px}.seller{padding:8px 10px;background:var(--accent2);color:#075f50;border:1px solid #b9e6d9;border-radius:9px;font-size:.86rem;font-weight:750}.empty{display:grid;place-items:center;text-align:center;min-height:360px;color:var(--muted)}.empty strong{display:block;color:var(--ink);font-size:1.2rem;margin-bottom:6px}.error{display:none;margin-top:14px;background:#fff0ee;border:1px solid #f1c3bc;color:#8c3428;border-radius:10px;padding:11px;font-size:.86rem;line-height:1.45}
+    footer{color:var(--muted);font-size:.78rem;line-height:1.5;margin-top:18px}.hidden{display:none}
+    @media(max-width:800px){header{align-items:start;flex-direction:column}.workspace{grid-template-columns:1fr}.summary{grid-template-columns:1fr}.results{min-height:420px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><p class="eyebrow">Explainable screening demo</p><h1>Ticket Account Risk Screener</h1><p class="intro">Upload account activity and follower relationships to identify unusual patterns that may deserve manual review.</p></div>
+    <div class="badge">Educational demo · No live marketplace data</div>
+  </header>
+  <div class="workspace">
+    <section class="panel controls" aria-labelledby="data-title">
+      <h2 id="data-title">Input data</h2>
+      <p class="helper">Start with the built-in fictional example, or upload both CSV files.</p>
+      <label for="accounts">Account activity CSV</label><input class="file" id="accounts" type="file" accept=".csv,text/csv">
+      <label for="connections">Follower relationships CSV</label><input class="file" id="connections" type="file" accept=".csv,text/csv">
+      <div class="actions"><button class="primary" id="run-upload">Run uploaded data</button><button class="secondary" id="run-demo">Run example data</button></div>
+      <div class="error" id="error" role="alert"></div>
+      <p class="privacy">Files are processed inside your browser and are not uploaded to a server. Required columns are shown in the example downloads.</p>
+    </section>
+    <section class="panel results" aria-live="polite">
+      <h2>Screening results</h2><p class="helper">Indicators prioritize accounts for review; they do not prove fraud.</p>
+      <div id="empty" class="empty"><div><strong>No screening run yet</strong>Choose the example or upload two CSV files.</div></div>
+      <div id="output" class="hidden"><div class="summary"><div class="metric"><strong id="account-total">0</strong><span>accounts reviewed</span></div><div class="metric"><strong id="risk-total">0</strong><span>risk candidates</span></div><div class="metric"><strong id="seller-total">0</strong><span>sellers for review</span></div></div><div class="section-title">Risk candidates</div><div class="cards" id="risk-cards"></div><div class="section-title">Sellers with mostly flagged followers</div><div class="seller-list" id="seller-list"></div></div>
+    </section>
+  </div>
+  <footer>Rules use relative activity quantiles, account age, reciprocal connections, and follower composition. All built-in records are fictional.</footer>
+</main>
+<script>
+const demoAccounts=`account_id,account_created,num_listings,num_messages
+fan_ticket_01,2022-05-10,24,18
+maple_seats,2021-08-15,31,22
+newdeal_88,2026-07-02,0,140
+vip_fastpass,2026-08-18,1,132
+concert_friend,2024-03-11,4,65
+seat_helper,2023-09-21,7,52
+quicktransfer,2026-06-15,2,115
+trusted_tickets,2020-02-09,48,35
+buyer_alex,2025-01-20,0,12
+buyer_mina,2024-04-04,0,9
+buyer_sam,2023-07-17,0,7
+buyer_lee,2022-12-12,0,5`;
+const demoConnections=`follower,following
+newdeal_88,vip_fastpass
+quicktransfer,vip_fastpass
+concert_friend,vip_fastpass
+newdeal_88,maple_seats
+quicktransfer,maple_seats
+vip_fastpass,maple_seats
+buyer_alex,maple_seats
+buyer_mina,maple_seats
+buyer_sam,trusted_tickets
+buyer_lee,trusted_tickets
+buyer_alex,trusted_tickets
+buyer_mina,trusted_tickets
+trusted_tickets,buyer_sam
+trusted_tickets,buyer_lee
+trusted_tickets,buyer_alex
+trusted_tickets,buyer_mina
+maple_seats,buyer_alex
+fan_ticket_01,trusted_tickets
+trusted_tickets,fan_ticket_01
+fan_ticket_01,trusted_tickets
+concert_friend,seat_helper
+seat_helper,concert_friend
+newdeal_88,quicktransfer
+quicktransfer,newdeal_88
+vip_fastpass,quicktransfer
+newdeal_88,seat_helper
+newdeal_88,concert_friend`;
+const reasonLabels={highMessagesLowListings:"High messages with low listings",highMessagesLowMutuals:"High messages with few mutual connections",highMessagesNewAccount:"High messages from a recent account",highFollowingLowFollowers:"Following count is more than twice the follower count"};
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));}
+function rows(text){return text.trim().split(/\r?\n/).map(line=>line.split(',').map(v=>v.trim()));}
+function quantile(values,p){const sorted=[...values].sort((a,b)=>a-b);return sorted[Math.floor(p*(sorted.length-1))];}
+function analyze(accountsText,connectionsText){
+  const aRows=rows(accountsText),cRows=rows(connectionsText); const expectedA="account_id,account_created,num_listings,num_messages",expectedC="follower,following";
+  if(aRows[0].join(',')!==expectedA) throw new Error(`Account CSV columns must be: ${expectedA}`);
+  if(cRows[0].join(',')!==expectedC) throw new Error(`Connection CSV columns must be: ${expectedC}`);
+  const accounts={};
+  for(const r of aRows.slice(1)){if(r.length!==4||!r[0]) continue;const listings=Number(r[2]),messages=Number(r[3]);if(!Number.isFinite(listings)||!Number.isFinite(messages)) throw new Error(`Listings and messages must be numbers for ${r[0]}.`);accounts[r[0]]={created:r[1],listings,messages,followers:[],following:[],mutuals:0,groups:[]};}
+  for(const r of cRows.slice(1)){if(r.length!==2) continue;const [follower,following]=r;if(!accounts[follower]||!accounts[following]) continue;if(!accounts[following].followers.includes(follower))accounts[following].followers.push(follower);if(!accounts[follower].following.includes(following))accounts[follower].following.push(following);}
+  const values=Object.values(accounts);if(!values.length) throw new Error("The account CSV does not contain any valid accounts.");
+  for(const a of values)a.mutuals=a.following.filter(id=>a.followers.includes(id)).length;
+  const high=quantile(values.map(a=>a.messages),.8),veryHigh=quantile(values.map(a=>a.messages),.9),lowListings=quantile(values.map(a=>a.listings),.2),lowMutuals=quantile(values.map(a=>a.mutuals),.2);
+  for(const a of values){if(a.messages>=veryHigh&&a.listings<=lowListings)a.groups.push('highMessagesLowListings');if(a.messages>=high&&a.mutuals<=lowMutuals)a.groups.push('highMessagesLowMutuals');if(a.messages>=high&&a.created>='2026-01-01')a.groups.push('highMessagesNewAccount');if(a.following.length>2*a.followers.length)a.groups.push('highFollowingLowFollowers');}
+  const risks=Object.entries(accounts).filter(([,a])=>a.groups.length).sort((x,y)=>y[1].groups.length-x[1].groups.length||y[0].localeCompare(x[0]));
+  const sellers=Object.entries(accounts).filter(([,a])=>a.listings!==0&&a.followers.length&&a.followers.filter(id=>accounts[id].groups.length).length>a.followers.length/2).sort((x,y)=>{const cx=x[1].followers.filter(id=>accounts[id].groups.length).length,cy=y[1].followers.filter(id=>accounts[id].groups.length).length;return cy-cx||y[0].localeCompare(x[0]);});
+  return {accounts,risks,sellers};
+}
+function render(result){document.getElementById('empty').classList.add('hidden');document.getElementById('output').classList.remove('hidden');document.getElementById('account-total').textContent=Object.keys(result.accounts).length;document.getElementById('risk-total').textContent=result.risks.length;document.getElementById('seller-total').textContent=result.sellers.length;document.getElementById('risk-cards').innerHTML=result.risks.length?result.risks.map(([id,a])=>`<article class="risk-card"><div class="risk-top"><span class="risk-id">${escapeHtml(id)}</span><span class="risk-count">${a.groups.length} indicator${a.groups.length===1?'':'s'}</span></div><div class="reasons">${a.groups.map(g=>reasonLabels[g]).join(' · ')}</div></article>`).join(''):'<div class="helper">No accounts met the screening rules.</div>';document.getElementById('seller-list').innerHTML=result.sellers.length?result.sellers.map(([id])=>`<span class="seller">${escapeHtml(id)}</span>`).join(''):'<span class="helper">No sellers met this rule.</span>';}
+function showError(message){const box=document.getElementById('error');box.textContent=message;box.style.display='block';}
+function clearError(){document.getElementById('error').style.display='none';}
+document.getElementById('run-demo').addEventListener('click',()=>{clearError();render(analyze(demoAccounts,demoConnections));});
+document.getElementById('run-upload').addEventListener('click',async()=>{clearError();const a=document.getElementById('accounts').files[0],c=document.getElementById('connections').files[0];if(!a||!c){showError('Please select both CSV files.');return;}try{render(analyze(await a.text(),await c.text()));}catch(e){showError(e.message);}});
+</script>
+</body>
+</html>
