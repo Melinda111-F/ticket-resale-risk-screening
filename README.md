@@ -1,4 +1,9 @@
 # Ticket Resale Account Risk Screening Tool
+## Live Demo
+
+[Open the Ticket Account Risk Screener](https://ticket-account-risk-screener.mmmlinda1111.chatgpt.site)
+
+Upload account activity and follower relationship files, or run the built-in fictional dataset directly in your browser. No Python installation is required.
 
 This beginner-friendly Python project screens accounts on a fictional ticket
 resale marketplace. It uses account activity and follower-network patterns to
