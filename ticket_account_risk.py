@@ -1,6 +1,8 @@
 """Screen ticket-resale marketplace accounts using explainable network rules."""
 
+import csv
 from copy import deepcopy
+from pathlib import Path
 from typing import TextIO
 
 from constants import (
@@ -210,6 +212,99 @@ def order_sellers_manipulating_trust(accounts: MarketplaceData) -> list[str]:
     return ordered
 
 
+def export_power_bi_data(accounts: MarketplaceData,
+                         output_directory: str | Path = "output") -> None:
+    """Write flat account and risk-group tables for a Power BI report."""
+    output_path = Path(output_directory)
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    candidates = set(find_all_risk_candidates(accounts))
+    flagged_sellers = set(find_sellers_manipulating_trust(accounts))
+    candidate_order = order_risk_candidates(accounts)
+    seller_order = order_sellers_manipulating_trust(accounts)
+    candidate_ranks = {
+        account_id: rank
+        for rank, account_id in enumerate(candidate_order, start=1)
+    }
+    seller_ranks = {
+        account_id: rank
+        for rank, account_id in enumerate(seller_order, start=1)
+    }
+
+    readable_group_names = {
+        HIGH_MESSAGES_LOW_LISTINGS: "High messages with low listings",
+        HIGH_MESSAGES_LOW_MUTUALS: "High messages with low mutual connections",
+        HIGH_MESSAGES_NEW_ACCOUNT: "High messages from a new account",
+        HIGH_FOLLOWING_LOW_FOLLOWERS: "High following with low followers",
+    }
+
+    summary_fields = [
+        "account_id",
+        "account_created",
+        "num_listings",
+        "num_messages",
+        "num_followers",
+        "num_following",
+        "num_mutuals",
+        "risk_group_count",
+        "risk_groups",
+        "is_risk_candidate",
+        "risk_candidate_rank",
+        "risky_follower_count",
+        "risky_follower_share",
+        "is_seller_trust_risk",
+        "seller_trust_risk_rank",
+    ]
+
+    with (output_path / "power_bi_account_risk_summary.csv").open(
+            "w", encoding="utf-8", newline="") as summary_file:
+        writer = csv.DictWriter(summary_file, fieldnames=summary_fields)
+        writer.writeheader()
+
+        for account_id, account in accounts.items():
+            followers = account[FOLLOWERS]
+            risky_follower_count = sum(
+                1 for follower in followers if follower in candidates
+            )
+            risky_follower_share = (
+                risky_follower_count / len(followers) if followers else 0.0
+            )
+            readable_groups = [
+                readable_group_names[group] for group in account[RISK_GROUPS]
+            ]
+
+            writer.writerow({
+                "account_id": account_id,
+                "account_created": account[ACCOUNT_CREATED],
+                "num_listings": account[NUM_LISTINGS],
+                "num_messages": account[NUM_MESSAGES],
+                "num_followers": len(followers),
+                "num_following": len(account[FOLLOWING]),
+                "num_mutuals": account[NUM_MUTUALS],
+                "risk_group_count": len(account[RISK_GROUPS]),
+                "risk_groups": " | ".join(readable_groups),
+                "is_risk_candidate": account_id in candidates,
+                "risk_candidate_rank": candidate_ranks.get(account_id, ""),
+                "risky_follower_count": risky_follower_count,
+                "risky_follower_share": round(risky_follower_share, 4),
+                "is_seller_trust_risk": account_id in flagged_sellers,
+                "seller_trust_risk_rank": seller_ranks.get(account_id, ""),
+            })
+
+    detail_fields = ["account_id", "risk_group", "risk_group_code"]
+    with (output_path / "power_bi_risk_group_details.csv").open(
+            "w", encoding="utf-8", newline="") as detail_file:
+        writer = csv.DictWriter(detail_file, fieldnames=detail_fields)
+        writer.writeheader()
+        for account_id, account in accounts.items():
+            for group in account[RISK_GROUPS]:
+                writer.writerow({
+                    "account_id": account_id,
+                    "risk_group": readable_group_names[group],
+                    "risk_group_code": group,
+                })
+
+
 def main() -> None:
     """Run the account-risk screening pipeline on the sample files."""
     with open("data/accounts.csv", "r", encoding="utf-8") as accounts_file:
@@ -220,6 +315,7 @@ def main() -> None:
 
     add_num_mutual_connections(accounts)
     add_risk_candidate_groups(accounts)
+    export_power_bi_data(accounts)
 
     print("Risk candidates:")
     for account_id in order_risk_candidates(accounts):
@@ -227,6 +323,8 @@ def main() -> None:
 
     print("\nSellers potentially manipulating trust:")
     print(order_sellers_manipulating_trust(accounts))
+
+    print("\nPower BI data written to the output directory.")
 
 
 if __name__ == "__main__":

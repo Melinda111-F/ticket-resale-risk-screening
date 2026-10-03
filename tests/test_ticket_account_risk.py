@@ -1,7 +1,10 @@
 """Tests for the ticket marketplace account-risk functions."""
 
 import io
+import csv
+import tempfile
 import unittest
+from pathlib import Path
 
 from constants import FOLLOWERS, FOLLOWING, NUM_MUTUALS, RISK_GROUPS
 from ticket_account_risk import (
@@ -9,6 +12,7 @@ from ticket_account_risk import (
     add_num_mutual_connections,
     add_risk_candidate_groups,
     create_accounts_dictionary,
+    export_power_bi_data,
     find_all_risk_candidates,
     find_sellers_manipulating_trust,
     get_quantile,
@@ -71,6 +75,32 @@ class TestTicketAccountRisk(unittest.TestCase):
         self.accounts["networked"][RISK_GROUPS] = ["risk"]
         flagged = find_sellers_manipulating_trust(self.accounts)
         self.assertIn("safe_seller", flagged)
+
+    def test_export_power_bi_data(self) -> None:
+        add_num_mutual_connections(self.accounts)
+        add_risk_candidate_groups(self.accounts)
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            export_power_bi_data(self.accounts, temporary_directory)
+            summary_path = Path(temporary_directory) / (
+                "power_bi_account_risk_summary.csv"
+            )
+            detail_path = Path(temporary_directory) / (
+                "power_bi_risk_group_details.csv"
+            )
+
+            self.assertTrue(summary_path.exists())
+            self.assertTrue(detail_path.exists())
+
+            with summary_path.open("r", encoding="utf-8", newline="") as file:
+                rows = list(csv.DictReader(file))
+
+            self.assertEqual(len(rows), 3)
+            new_busy = next(
+                row for row in rows if row["account_id"] == "new_busy"
+            )
+            self.assertEqual(new_busy["is_risk_candidate"], "True")
+            self.assertNotEqual(new_busy["risk_group_count"], "0")
 
 
 if __name__ == "__main__":

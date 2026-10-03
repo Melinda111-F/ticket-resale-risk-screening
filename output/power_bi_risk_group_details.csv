@@ -1,0 +1,9 @@
+account_id,risk_group,risk_group_code
+newdeal_88,High messages with low listings,highMessagesLowListings
+newdeal_88,High messages with low mutual connections,highMessagesLowMutuals
+newdeal_88,High messages from a new account,highMessagesNewAccount
+newdeal_88,High following with low followers,highFollowingLowFollowers
+vip_fastpass,High messages with low mutual connections,highMessagesLowMutuals
+vip_fastpass,High messages from a new account,highMessagesNewAccount
+concert_friend,High messages with low mutual connections,highMessagesLowMutuals
+quicktransfer,High messages from a new account,highMessagesNewAccount

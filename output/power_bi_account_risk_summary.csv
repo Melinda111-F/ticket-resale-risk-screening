@@ -1,0 +1,13 @@
+account_id,account_created,num_listings,num_messages,num_followers,num_following,num_mutuals,risk_group_count,risk_groups,is_risk_candidate,risk_candidate_rank,risky_follower_count,risky_follower_share,is_seller_trust_risk,seller_trust_risk_rank
+fan_ticket_01,2022-05-10,24,18,1,1,1,0,,False,,0,0.0,False,
+maple_seats,2021-08-15,31,22,5,1,1,0,,False,,3,0.6,True,2
+newdeal_88,2026-07-02,0,140,1,5,1,4,High messages with low listings | High messages with low mutual connections | High messages from a new account | High following with low followers,True,1,1,1.0,False,
+vip_fastpass,2026-08-18,1,132,3,2,1,2,High messages with low mutual connections | High messages from a new account,True,2,3,1.0,True,1
+concert_friend,2024-03-11,4,65,2,2,1,1,High messages with low mutual connections,True,4,1,0.5,False,
+seat_helper,2023-09-21,7,52,2,1,1,0,,False,,2,1.0,True,3
+quicktransfer,2026-06-15,2,115,2,3,2,1,High messages from a new account,True,3,2,1.0,True,4
+trusted_tickets,2020-02-09,48,35,5,5,5,0,,False,,0,0.0,False,
+buyer_alex,2025-01-20,0,12,2,2,2,0,,False,,0,0.0,False,
+buyer_mina,2024-04-04,0,9,1,2,1,0,,False,,0,0.0,False,
+buyer_sam,2023-07-17,0,7,1,1,1,0,,False,,0,0.0,False,
+buyer_lee,2022-12-12,0,5,1,1,1,0,,False,,0,0.0,False,
